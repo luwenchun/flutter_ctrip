@@ -14,6 +14,10 @@ class LocalNav extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(6)),
+        // border: Border.all(
+        //   color:Colors.red,
+        //   width:1.0,
+        // ),
         boxShadow: [
           BoxShadow(
             color: Colors.black12,

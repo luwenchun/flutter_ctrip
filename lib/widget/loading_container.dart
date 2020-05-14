@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class LoadingContainer extends StatelessWidget {
   final Widget child;
   final bool isLoading;
-  final bool cover;
+  final bool cover;//分页loadding
 
 
   LoadingContainer({@required this.child, @required this.isLoading, this.cover = false});
@@ -11,6 +11,8 @@ class LoadingContainer extends StatelessWidget {
   Widget get _loadingView {
     return Center(
       child: CircularProgressIndicator(),
+      // child: LinearProgressIndicator(),
+      // child: RefreshIndicator(),
     );
   }
 

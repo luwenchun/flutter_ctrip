@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ctrip/pages/destination_page.dart';
 import 'package:flutter_ctrip/pages/home_page.dart';
+import 'package:flutter_ctrip/pages/destination_page.dart';
+import 'package:flutter_ctrip/pages/travel_page.dart';
 import 'package:flutter_ctrip/pages/my_page.dart';
 import 'package:flutter_ctrip/pages/test_page.dart';
-import 'package:flutter_ctrip/pages/travel_page.dart';
+import 'package:flutter_ctrip/pages/speak_page.dart';
 import 'package:flutter_ctrip/widget/scalable_box.dart';
 
 class TabNavigator extends StatefulWidget {
@@ -12,7 +13,7 @@ class TabNavigator extends StatefulWidget {
 }
 
 class _TabNavigatorState extends State<TabNavigator> {
-  final _defaultColor = Color(0xff8a8a8a);
+  final _defaultColor = Color(0xff8a8a8a);//32位颜色进制
   final _activeColor = Color(0xff50b4ed);
   int _currentIndex = 0;
   final PageController _controller = PageController(
@@ -29,6 +30,9 @@ class _TabNavigatorState extends State<TabNavigator> {
           DestinationPage(),
           TravelPage(),
           MyPage(),
+          // TestPage(),
+          // SpeakPage(),
+
         ],
         physics: NeverScrollableScrollPhysics(),
       ),

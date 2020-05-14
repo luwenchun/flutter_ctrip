@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     TextStyle textStyle = TextStyle(fontSize: 20);
 
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,//使用大量缓存 方便的debug使用
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,

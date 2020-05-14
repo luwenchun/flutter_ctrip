@@ -52,6 +52,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             MediaQuery.removePadding(
               removeTop: true,
+              // removeBottom: true,
               context: context,
               child: NotificationListener(
                 onNotification: (scrollNotification) {
@@ -76,12 +77,13 @@ class _HomePageState extends State<HomePage> {
                                 itemCount: bannerList.length,
                                 autoplay: true,
                                 pagination: SwiperPagination(
-                                    builder: SquareSwiperPagination(
-                                      size: 6,
-                                      activeSize: 6,
-                                      color: Colors.white.withAlpha(80),
-                                      activeColor: Colors.white,
-                                    ),
+                                  // DotSwiperPaginationBuilder
+                                  builder: SquareSwiperPagination(
+                                    size: 6,
+                                    activeSize: 6,
+                                    color: Colors.white.withAlpha(80),
+                                    activeColor: Colors.white,
+                                  ),
                                   alignment: Alignment.bottomRight,
                                   margin: EdgeInsets.fromLTRB(0, 0, 14, 28),
                                 ),
@@ -106,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                                 },
                               ),
                             ),
-                            Positioned(
+                            Positioned(//浮动定位
                               top: 188,
                               child: Container(
                                 width: MediaQuery.of(context).size.width,
@@ -127,6 +129,7 @@ class _HomePageState extends State<HomePage> {
 //                            GridNav(
 //                              gridNavModel: gridNavModel,
 //                            ),
+                            // GridNav(),
                             GridNavNew(),
                             Padding(
                               padding: EdgeInsets.only(top: 10),
@@ -160,12 +163,16 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient:LinearGradient(
               //AppBar渐变遮罩背景
               colors: [Color(0x66000000), Colors.transparent],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
+            border: Border.all(
+              color:Colors.red,
+              width:1
+            )
           ),
           child: Container(
             padding: EdgeInsets.fromLTRB(14, 20, 0, 0),
@@ -180,6 +187,7 @@ class _HomePageState extends State<HomePage> {
               ),]
             ),
             child: SearchBar(
+              //高度高度20%时候，消息图片更换 searinput背景变灰
               searchBarType: appBarAlpha > 0.2
                   ? SearchBarType.homeLight
                   : SearchBarType.home,
@@ -219,6 +227,7 @@ class _HomePageState extends State<HomePage> {
   Future<Null> _handleRefresh() async {
     try {
       HomeModel homeModel = await HomeDao.fetch();
+      print('1111111');
       setState(() {
         localNavList = homeModel.localNavList;
         gridNavModel = homeModel.gridNav;

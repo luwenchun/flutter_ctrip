@@ -118,11 +118,12 @@ class _SearchBarState extends State<SearchBar> {
   }
 
   _inputBox() {
+    //searinput背景变灰
     Color inputBoxColor;
     if (widget.searchBarType == SearchBarType.home) {
       inputBoxColor = Colors.white;
     } else {
-      inputBoxColor = Color(int.parse('0xffEDEDED'));
+      inputBoxColor = Color(0xffEDEDED);
     }
     return Container(
       height: 34,
@@ -191,7 +192,8 @@ class _SearchBarState extends State<SearchBar> {
                                     TextStyle(fontSize: 14, color: Colors.grey),
                               ),
                             ),
-                      widget.inputBoxClick)),
+                      widget.inputBoxClick)
+            ),
           !showClear
               ? _wrapTap(
                   Image.asset(
