@@ -16,9 +16,9 @@ class TabNavigator extends StatefulWidget {
 class _TabNavigatorState extends State<TabNavigator> {
   final _defaultColor = Color(0xff8a8a8a);//32位颜色进制
   final _activeColor = Color(0xff50b4ed);
-  int _currentIndex = 2;
+  int _currentIndex = 0;
   final PageController _controller = PageController(
-    initialPage: 2,
+    initialPage: 0,
   );
 
   @override
@@ -29,8 +29,8 @@ class _TabNavigatorState extends State<TabNavigator> {
         children: <Widget>[
           HomePage(),
           DestinationPage(),
-          // TravelPage(),
-          JourneyPage(),
+          TravelPage(),
+          // JourneyPage(),
           MyPage(),
           
           // TestPage(),
