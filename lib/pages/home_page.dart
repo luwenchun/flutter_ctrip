@@ -162,6 +162,9 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: <Widget>[
         Container(
+          // BoxConstraints:maxw
+          margin: EdgeInsets.all(10),
+          // width: 414.0,
           decoration: BoxDecoration(
             gradient:LinearGradient(
               //AppBar渐变遮罩背景

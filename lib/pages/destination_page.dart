@@ -49,11 +49,11 @@ class _DestinationPageState extends State<DestinationPage> with AutomaticKeepAli
                 tabsElevation: 0,
                 indicatorWidth: 0,
                 selectedTabBackgroundColor: Colors.white,
-                backgroundColor: Colors.white,
-                tabTextStyle: TextStyle(
-                  height: 60,
-                  color: Color(0xff333333),
-                ),
+                // backgroundColor: Colors.white,
+                // tabTextStyle: TextStyle(
+                //   height: 60,
+                //   color: Color(0xff333333),
+                // ),
                 tabs: tabs,
                 contents: tabPages,
               ),
@@ -62,6 +62,10 @@ class _DestinationPageState extends State<DestinationPage> with AutomaticKeepAli
               padding: EdgeInsets.fromLTRB(8, 6, 6, 10),
               decoration: BoxDecoration(
                 color: Colors.white,
+                border: Border.all(
+                  color:Colors.red,
+                  width:1
+                ),
                 boxShadow: [
                   BoxShadow(
                     color: Color.fromARGB(10, 0, 0, 0),
