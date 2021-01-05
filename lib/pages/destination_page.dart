@@ -49,11 +49,11 @@ class _DestinationPageState extends State<DestinationPage> with AutomaticKeepAli
                 tabsElevation: 0,
                 indicatorWidth: 0,
                 selectedTabBackgroundColor: Colors.white,
-                // backgroundColor: Colors.white,
-                // tabTextStyle: TextStyle(
-                //   height: 60,
-                //   color: Color(0xff333333),
-                // ),
+                 backgroundColor: Colors.white,
+                 tabTextStyle: TextStyle(
+                   height: 60,
+                   color: Color(0xff333333),
+                 ),
                 tabs: tabs,
                 contents: tabPages,
               ),

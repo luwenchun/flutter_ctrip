@@ -162,20 +162,17 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: <Widget>[
         Container(
-          // BoxConstraints:maxw
-          margin: EdgeInsets.all(10),
-          // width: 414.0,
           decoration: BoxDecoration(
             gradient:LinearGradient(
               //AppBar渐变遮罩背景
-              colors: [Color(0x66000000), Colors.transparent],
+              colors: [Color(0x66000000), Colors.red],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
-            border: Border.all(
-              color:Colors.red,
-              width:1
-            )
+//            border: Border.all(
+//              color:Colors.red,
+//              width:1
+//            )
           ),
           child: Container(
             padding: EdgeInsets.fromLTRB(14, 20, 0, 0),
@@ -221,10 +218,11 @@ class _HomePageState extends State<HomePage> {
     } else if (alpha > 1) {
       alpha = 1;
     }
+    print('透明度${alpha}');
     setState(() {
       appBarAlpha = alpha;
     });
-    print(alpha);
+
   }
 
   Future<Null> _handleRefresh() async {
